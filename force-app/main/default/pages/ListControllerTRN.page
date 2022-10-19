@@ -1,0 +1,22 @@
+<apex:page standardController="Account" recordSetVar="multiAcc" tabStyle="account" sidebar="true" showHeader="true">
+ 
+ <apex:form >
+   <apex:selectList value="{!filterid}">
+       <apex:selectOptions value="{!listviewoptions}"/>
+       
+ 
+         <apex:commandButton value="Filter" action="{!list}"/>
+   </apex:selectList>
+ 
+ </apex:form>
+  
+ <apex:pageBlock title="Accounts">
+   <apex:pageBlockTable value="{!multiAcc}" var="loopAcc">
+      <apex:column value="{!loopAcc.id}"/>      
+      <apex:column value="{!loopAcc.id}"/> 
+      <apex:column value="{!loopAcc.id}"/> 
+   </apex:pageBlockTable>
+  </apex:pageBlock>
+ 
+ 
+</apex:page>

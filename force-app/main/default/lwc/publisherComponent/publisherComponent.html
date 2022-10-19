@@ -1,0 +1,22 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 07-27-2022
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+
+<template>
+    
+    
+      <lightning-card  title="Hello">
+        <lightning-button onclick={publishHandler} label="New" slot="actions"></lightning-button>
+        
+        <div class="slds-p-around_medium lgc-bg">
+          <lightning-input onchange={textChangeHandler}  type="text" label="Enter some text"></lightning-input>
+      </div>
+    
+        <p slot="footer">publisher component</p>
+    </lightning-card>
+    
+    </template>

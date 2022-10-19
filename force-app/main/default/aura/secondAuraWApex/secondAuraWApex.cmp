@@ -1,0 +1,25 @@
+<aura:component controller="auraMathServerController">
+    
+   
+    <aura:attribute name="xNumber" type="decimal" />
+    <aura:attribute name="yNumber" type="decimal" />
+    <aura:attribute name="Result" type="decimal" />
+    
+     <h1> Second aura Component </h1>
+     <hr />
+    
+    <ui:inputNumber label="X Number" value="{!v.xNumber}" aura:id="xnumber" />
+    <ui:inputNumber label="Y Number" value="{!v.yNumber}" aura:id="ynumber" />
+    
+    <hr />
+    
+    <ui:button label="+" press="{!c.sumClientController}" class="button" />
+    
+    <hr />
+    
+    <b>  X number :  {!v.xNumber}  </b> <br />
+    <b>  Y Number :  {!v.yNumber}</b> <br />
+    <b> Result Number :  {!v.Result} </b>
+    
+    
+</aura:component>

@@ -1,0 +1,23 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 07-21-2022
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    
+    
+    <lightning-card  variant="Narrow"  title="Account" icon-name="standard:account">
+     
+
+      <lightning-datatable
+                    key-field="id"
+                    data={multiAccount}
+                    columns={columns}>
+            </lightning-datatable>
+    
+      <p slot="footer"></p>
+    </lightning-card>
+    
+    </template>

@@ -1,0 +1,117 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 07-03-2022
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<apex:page standardController="Opportunity" recordSetVar="multiOp">
+​
+​
+    <apex:form >
+​
+        <apex:pageBlock >
+​
+            <apex:panelGrid columns="2">
+                <apex:outputLabel value="List Views" />
+                <apex:selectList value="{!filterId}" size="1">
+                    <apex:actionSupport event="onchange" reRender="opportunity_table" />
+                    <apex:selectOptions value="{!listviewoptions}" />
+​
+​
+​
+​
+                </apex:selectList>
+​
+​
+​
+            </apex:panelGrid>
+​
+​
+​
+        </apex:pageBlock>
+​
+​
+​
+​
+​
+​
+​
+        <apex:pageBlock Title="Opportunity Record">
+​
+​
+            <apex:pageBlockButtons >
+​
+                <apex:commandButton value="<<" action="{!first}" />
+                <apex:commandButton value="<" action="{!previous}" />
+                <apex:commandButton value="Save" action="{!quicksave}" />
+                <apex:commandButton value=">" action="{!next}" />
+                <apex:commandButton value=">>" action="{!last}" />
+​
+​
+            </apex:pageBlockButtons>
+​
+            <apex:pageBlockTable value="{!multiOp}" var="loop" id="opportunity_table">
+​
+​
+                <apex:column headerValue="Opportunity Name">
+​
+                    <apex:inputField value="{!loop.Name}" />
+​
+​
+                </apex:column>
+​
+                <apex:column headerValue="Stage">
+​
+                    <apex:inputField value="{!loop.StageName}" />
+​
+​
+                </apex:column>
+​
+                <apex:column headerValue="Amount">
+​
+                    <apex:inputField value="{!loop.Amount}" />
+​
+​
+                </apex:column>
+​
+                <apex:column headerValue="Close Date">
+​
+                    <apex:inputField value="{!loop.CloseDate}" />
+​
+​
+                </apex:column>
+​
+                <apex:column headerValue="Expected Revenue">
+​
+                    <apex:inputField value="{!loop.ExpectedRevenue}" />
+​
+​
+                </apex:column>
+​
+​
+                <apex:column headerValue="Account">
+​
+                    <apex:outputField value="{!loop.Account.Name}" />
+​
+​
+                </apex:column>
+​
+​
+​
+​
+            </apex:pageBlockTable>
+​
+​
+​
+​
+​
+​
+        </apex:pageBlock>
+​
+​
+​
+​
+​
+    </apex:form>
+</apex:page>

@@ -1,0 +1,35 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 07-06-2022
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<aura:component controller="ContactServerController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction">
+<aura:handler name="init" value="{!this}" action="{!c.getContactsClientControllor}" />
+<aura:attribute name="multiContact" type="Contact[]" />
+<aura:attribute name="Message" type="String" default="Last 10 Contacts"/>
+<lightning:card footer="{!v.Message}" title="Contacts">
+        
+        <p class="slds-p-horizontal_small">
+            <table>
+                <thead>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                </thead>
+                <tbody>
+                    <aura:iteration items="{!v.multiContact}" var="loopcontact" indexVar="index">
+                        <tr>
+                            <td data-label="First Name" scope="row"> {!loopcontact.FirstName} </td>                       
+                            <td data-label="Last Name" scope="row"> {!loopcontact.LastName} </td>                       
+                            <td data-label="Phone" scope="row"> {!loopcontact.Phone} </td>                        
+                            <td data-label="Email" scope="row"> {!loopcontact.Email} </td>
+                        </tr>
+                    </aura:iteration>
+                </tbody>
+            </table>
+        </p>
+    </lightning:card>
+</aura:component>

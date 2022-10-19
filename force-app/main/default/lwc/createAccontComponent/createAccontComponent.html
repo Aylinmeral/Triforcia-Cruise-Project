@@ -1,0 +1,18 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 07-20-2022
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Create Account">
+      <lightning-record-form
+        object-api-name={objectApiName}
+        fields={fieldList}
+        onsuccesss={onSuccessHandler}
+        onerror={onErrorHanler}
+      ></lightning-record-form>
+      <p slot="footer"></p>
+    </lightning-card>
+  </template>

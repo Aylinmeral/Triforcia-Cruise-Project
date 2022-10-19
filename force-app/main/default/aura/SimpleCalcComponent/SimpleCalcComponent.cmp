@@ -1,0 +1,27 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 07-05-2022
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<aura:component controller="SimpleCalcServerController">
+
+<aura:attribute name="xnumber" type="decimal" default="0"/>
+<aura:attribute name="ynumber" type="decimal" default="0"/>
+<aura:attribute name="result" type="decimal" default="0"/>
+
+<h1>Aura Component Simple Calculator</h1>
+<hr/>
+xnumber : {!v.xnumber}
+ynumber : {!v.ynumber}
+result : {!v.result}
+
+<hr/>
+
+<ui:inputNumber label="Number X :" aura:id="xno" value="{!v.xnumber}"/> 
+<ui:inputNumber label="Number Y :" aura:id="xno" value="{!v.ynumber}"/> 
+
+<ui:button label="+" press="{!c.sumClientControllers}" class="button"/>
+
+</aura:component>

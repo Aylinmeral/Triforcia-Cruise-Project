@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TITLE_EMO__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(
+Title ,
+&apos;CEO&apos;, &apos;👩🏻‍💼&apos;,
+&apos;CFO&apos;, &apos;👨🏻‍💼&apos;,
+&apos;VP,Finance&apos;,&apos;🧑🏽‍💼&apos;,
+&apos;👮🏽&apos;
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>TITLE EMO</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,21 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 07-20-2022
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card
+      variant="Narrow"
+      title={objectApiName}
+      icon-name="standard:account"
+    >
+      <lightning-record-form
+        object-api-name={objectApiName}
+        record-id={recordId}
+        fields={fieldList}
+      ></lightning-record-form>
+      <p slot="footer"></p>
+    </lightning-card>
+  </template>

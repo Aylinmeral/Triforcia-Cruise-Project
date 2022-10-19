@@ -1,0 +1,19 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 07-20-2022
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card
+      variant="Narrow"
+      title="Account List"
+      icon-name="standard:account"
+    >
+      <template for:each={multiaccount} for:item="singleAccount">
+        <p key={singleAccount.Id}>{singleAccount.Name}</p>
+      </template>
+      <p slot="footer">Last 10 Records</p>
+    </lightning-card>
+  </template>

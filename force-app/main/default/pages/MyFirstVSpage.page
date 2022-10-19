@@ -1,0 +1,14 @@
+<apex:page controller="simpleMathController" docType="html-5.0">
+ 
+ <apex:form >
+ <apex:input id="number1" value="{!x}" type="number"/>
+ <apex:input id="number2" value="{!y}" type="number"/>
+ <apex:commandButton value="+" action="{!sum}"/>
+ <apex:commandButton value="-" action="{!sub}"/>
+ <apex:commandButton value="*" action="{!mul}"/>
+ <apex:commandButton value="/" action="{!div}"/>
+ 
+ </apex:form>
+ 
+ Sum Result: {!result}
+</apex:page>
